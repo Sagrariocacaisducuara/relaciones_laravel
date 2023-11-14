@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RolesController;
+use App\Http\Controllers\ClientesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +26,7 @@ Route::post('/usuarios/store', [UserController::class, 'store'])->name('user.sto
 Route::get('/rol', [RolesController::class, 'index'])->name('role.index');
 Route::get('/rol/create', [RolesController::class, 'create'])->name('role.create');
 Route::post('/rol/store', [RolesController::class, 'store'])->name('role.store');
+
+Route::get('/cliente', [ClientesController::class, 'index'])->name('clientes.index');
+Route::get('/cliente/create', [ClientesController::class, 'create'])->name('clientes.create');
+Route::post('/cliente/store', [ClientesController::class, 'store'])->name('clientes.store');
